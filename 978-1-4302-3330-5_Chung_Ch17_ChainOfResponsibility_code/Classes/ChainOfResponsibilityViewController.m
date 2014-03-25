@@ -45,13 +45,13 @@
   
   // put it in metal armor
   AttackHandler *metalArmoredAvatar = [[[MetalArmor alloc] init] autorelease];
-  [metalArmoredAvatar setAttackHandler:avatar];
+  [metalArmoredAvatar setNextAttackHandler:avatar];
   
   // then add a crytal shield
   // to the avatar who's in 
   // a metal armor
   AttackHandler *superAvatar = [[[CrystalShield alloc] init] autorelease];
-  [superAvatar setAttackHandler:metalArmoredAvatar];
+  [superAvatar setNextAttackHandler:metalArmoredAvatar];
   
   // ... some other actions
   
